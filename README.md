@@ -12,8 +12,7 @@ The module challenge is the afternoon project or assignment that students work t
 - understand and be able to use different operators.
 - write a basic for loop / while loop.
 - write control flow using if/else statements.
-- use function declarations, expressions, and arrow
-functions and describe their differences
+- use function declarations, expressions, and arrow functions and describe their differences
   
 ## Introduction
 
@@ -25,7 +24,7 @@ The formula for a monthly mortgage payment is as follows:
 
 Or, in plain text:
 ```
-M = P [ I ( 1 + I )^N ] / [ ( 1 + I )^N – 1 ]
+M = principal [ interestRate ( 1 + interestRate )^periods ] / [ ( 1 + interestRate )^periods – 1 ]
 ```
 
 In order to find your monthly payment amount "M,” you need to plug in the following three numbers from your loan:
@@ -40,14 +39,14 @@ Check out the resources below for more of a step-by-step walk-through of this ma
 
 ## Instructions
 
-### Task 1: Set up Project
+<!-- ### Task 1: Set up Project
 
 Using VSCode and Command Line:
 
 1. Fork repo and add TL as collaborator on Github.
 2. Clone your fork (not Lambda's repo by mistake!).
 3. `cd` into your newly cloned repository.
-4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
+4. Create a new branch by typing `git checkout -b <firstName-lastName>`. -->
 
 ### Task 2: Complete MVP Requirements
 
