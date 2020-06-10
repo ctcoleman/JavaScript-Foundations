@@ -127,21 +127,22 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-const interestRateArr = [0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.05, 0.055, 0.06]
+// const interestRateArr = [0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.05, 0.055, 0.06]
 
-function variableInterestRate (principal, years, name) {
-  for (let i = 0; i < interestRateArr.length; i++) {
-    const interestRate = interestRateArr[i]
-    const monthlyInterestRate = (interestRate / 12)
-    const periods = (years * 12)
+// function variableInterestRate (principal, years, name) {
+//   for (let i = 0; i < interestRateArr.length; i++) {
+//     const interestRate = interestRateArr[i]
+//     const monthlyInterestRate = (interestRate / 12)
+//     const periods = (years * 12)
 
-    const numerator = monthlyInterestRate * (Math.pow((1 + monthlyInterestRate), periods))
-    const denominator = (Math.pow((1 + monthlyInterestRate), periods)) - 1
-    const monthlyRate = principal * (numerator / denominator)
-    console.log(name + ' with and interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate))
-  }
-}
-variableInterestRate(200000, 30, 'Chris')
+//     const numerator = monthlyInterestRate * (Math.pow((1 + monthlyInterestRate), periods))
+//     const denominator = (Math.pow((1 + monthlyInterestRate), periods)) - 1
+//     const monthlyRate = principal * (numerator / denominator)
+//     // window.alert(name + ' with an interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate)) Playing around withbutton and window.aler
+//     console.log(name + ' with an interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate))
+//   }
+// }
+// variableInterestRate(200000, 30, 'Chris')
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
 /* Attempt any of the stretch goals below once you have finished the work above.
@@ -150,6 +151,25 @@ Remember as always, these may require additional research beyond what you learne
 /*  🏡 Add  `Property Tax`, `Homeowner's insurance` and `HOA fees` as parameters in your function to calculate total 
 monthly spending on housing */
 
+const interestRateArr = [0.02, 0.025, 0.03, 0.035, 0.04, 0.045, 0.05, 0.055, 0.06]
+
+// function variableInterestRate (principal, years, name, propertyTax, homeInsurance, hoaFees) {
+//   for (let i = 0; i < interestRateArr.length; i++) {
+//     const interestRate = interestRateArr[i]
+//     const monthlyInterestRate = (interestRate / 12)
+//     const periods = (years * 12)
+
+//     const numerator = monthlyInterestRate * (Math.pow((1 + monthlyInterestRate), periods))
+//     const denominator = (Math.pow((1 + monthlyInterestRate), periods)) - 1
+//     const monthlyRate = principal * (numerator / denominator)
+//     const monthlyHousingTotal = monthlyRate + propertyTax + homeInsurance + hoaFees);
+    
+//     // window.alert(name + ' with an interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate)) Playing around withbutton and window.aler
+//     console.log (name + ' with an interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate))
+//     console.log ('Your total monthly housing cost will be ' + math.round(monthlyHousingTotal))
+//   }
+// }
+// variableInterestRate(200000, 30, 'Chris')
 
 /* 🏡 Build a calculator function that accepts `monthly payment` and `interest rate` and returns the maximum loan
 that a person could afford */
@@ -157,6 +177,22 @@ that a person could afford */
 
 /* 🏡 Explore using `window.prompt()` to allow a user to input parameters in the browser */
 
+function variableInterestRate (principal, years, name, propertyTax, homeInsurance, hoaFees) {
+    for (let i = 0; i < interestRateArr.length; i++) {
+      const interestRate = interestRateArr[i]
+      const monthlyInterestRate = (interestRate / 12)
+      const periods = (years * 12)
+  
+      const numerator = monthlyInterestRate * (Math.pow((1 + monthlyInterestRate), periods))
+      const denominator = (Math.pow((1 + monthlyInterestRate), periods)) - 1
+      const monthlyRate = principal * (numerator / denominator)
+      const monthlyHousingTotal = monthlyRate + propertyTax + homeInsurance + hoaFees);
+      
+      window.alert(name + ' with an interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate)) Playing around withbutton and window.aler
+      console.log (name + ' with an interest rate of ' + interestRate + ', your monthly rate is ' + Math.round(monthlyRate))
+      console.log ('Your total monthly housing cost will be ' + math.round(monthlyHousingTotal))
+    }
+  
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates
 (make sure to copy and paste as to not lose your work!) */
